@@ -1,15 +1,16 @@
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 
-void bubbleSort(int *nums) {
+void bubbleSort(int* nums) {
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 9; j++)
         {
-            if (nums[j] >= nums[j+1])
+            if (nums[j] >= nums[j + 1])
             {
                 int swap = nums[j];
-                nums[j] = nums[j+1];
+                nums[j] = nums[j + 1];
                 nums[j + 1] = swap;
             }
         }
@@ -18,9 +19,10 @@ void bubbleSort(int *nums) {
 
 int main()
 {
+    srand(time(0));
     int nums[10];
     for (int i = 0; i < 10; i++) {
-        nums[i] = rand() % 100;
+        nums[i] = (1 + rand() % 100);
     }
 
     for (int i = 0; i < 10; i++) {
