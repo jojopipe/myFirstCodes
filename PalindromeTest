@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main() {
+    int n, remainder, reverse = 0, original;
+
+
+    std::cin >> n;
+
+    original = n;
+
+    while (n != 0) {
+        remainder = n % 10;
+        reverse = reverse * 10 + remainder;
+        n /= 10;
+    }
+    if (reverse == original) {
+        std::cout << original << " is a palindrome";
+    }
+    else {
+        std::cout << original << " is NOT a palindrome";
+    }
+
+}
